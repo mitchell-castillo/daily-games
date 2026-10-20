@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#14151c"><meta name="description" content="Un juego original cada día. Pequeños mundos para jugar en el navegador, sin cuentas y con tu progreso guardado en este dispositivo.">
+  <title>Un juego cada día · Pequeñas pausas, grandes mundos</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+<div class="site-shell">
+<header class="site-header">
+  <a class="brand" href="./" aria-label="Un juego cada día, inicio"><span class="brand-mark" aria-hidden="true">j<span>·</span></span><span>un juego<br><strong>cada día.</strong></span></a>
+  <nav aria-label="Principal"><a class="nav-active" href="#catalogo">Colección</a><a href="#proyecto">El proyecto</a></nav>
+  <span class="header-note"><i></i> Hechos para jugar</span>
+</header>
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-intro"><span class="eyebrow"><span class="tiny-spark">✳</span> UN DÍA, UN NUEVO UNIVERSO</span><h1 id="hero-title">Tu próxima<br>pequeña <span>obsesión.</span></h1><p>Juegos originales, hechos uno a uno.<br>Entra, descubre algo distinto y vuelve por más.</p><a class="text-link" href="#catalogo">Explorar la colección <span aria-hidden="true">↘</span></a></div>
+  <div class="hero-aside"><div class="daily-stamp"><span>UN JUEGO</span><strong>cada<br>día</strong><span>NINGUNO IGUAL</span></div><p>Sin descargas.<br>Sin cuentas.<br><strong>Solo un buen rato.</strong></p></div>
+</section>
+<section class="featured" id="featured" aria-labelledby="featured-title" hidden>
+  <a class="featured-art" id="featured-art-link" href="https://mitchell-castillo.github.io/orbita-de-rescate/" aria-label="Jugar Órbita de Rescate"><img src="assets/orbita-cover.svg" alt="Ilustración de un astronauta flotando entre asteroides y rutas orbitales" width="960" height="680"><span class="art-label"><i></i> EL PRIMER DESPEGUE</span><span class="art-number" aria-hidden="true">01</span></a>
+  <div class="featured-copy"><div class="feature-top"><span class="pill pill-lime">NUEVO</span><span class="game-edition" id="featured-edition">JUEGO 001</span></div><span class="eyebrow muted" id="featured-category">PUZLES · ESPACIO</span><h2 id="featured-title">Órbita<br>de Rescate</h2><p id="featured-description"></p><div class="game-meta"><span id="featured-duration"></span><span id="featured-levels"></span><span>Gratis</span></div><div class="feature-actions"><a class="button button-lime" id="featured-play" href="https://mitchell-castillo.github.io/orbita-de-rescate/">Jugar ahora <span aria-hidden="true">↗</span></a><button class="button button-quiet" id="featured-details">Ver detalles</button></div><p class="local-note"><span aria-hidden="true">◈</span> Tu avance se queda en este navegador.</p></div>
+</section>
+<section class="catalogue" id="catalogo" aria-labelledby="catalogue-title">
+  <div class="section-heading"><div><span class="eyebrow muted">PEQUEÑOS MUNDOS, GRANDES PAUSAS</span><h2 id="catalogue-title">La colección<span class="count-badge" id="game-count">0</span></h2></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Encuentra tu próximo juego" aria-label="Buscar juegos"></label></div>
+  <div class="category-filters" id="category-filters" aria-label="Filtrar por categoría"></div>
+  <div class="game-grid" id="game-grid" aria-live="polite"><p class="loading-text">Preparando la colección…</p></div>
+  <p id="catalogue-status" class="catalogue-status" role="status"></p>
+  <noscript><p>Activa JavaScript para explorar el catálogo y guardar tu avance. Puedes abrir <a href="https://mitchell-castillo.github.io/orbita-de-rescate/">Órbita de Rescate</a> directamente.</p></noscript>
+</section>
+<section class="manifesto" id="proyecto" aria-labelledby="manifesto-title"><div><span class="eyebrow">ESTO APENAS COMIENZA</span><h2 id="manifesto-title">Mañana, otra idea.<br><span>Siempre algo distinto.</span></h2></div><div><p>Un experimento creativo: construir un juego original cada día. Nuevas mecánicas, nuevos retos y ninguna copia del anterior.</p><p class="muted">El catálogo crecerá con cada lanzamiento. Por ahora, tu aventura empieza en órbita.</p></div></section>
+</main>
+<footer><a class="footer-brand" href="./">un juego cada día<span>✳</span></a><p>Sin rastreadores. Sin cuentas. Progreso local.</p><a href="https://github.com/mitchell-castillo/daily-games">Código en GitHub ↗</a></footer>
+</div>
+<dialog id="details-dialog" aria-labelledby="detail-title"><div class="dialog-heading"><span class="eyebrow muted" id="detail-edition"></span><button class="icon-button" id="close-details" aria-label="Cerrar detalles">×</button></div><img id="detail-cover" alt="" width="960" height="680"><div class="dialog-content"><span class="eyebrow muted" id="detail-category"></span><h2 id="detail-title"></h2><p id="detail-description"></p><div class="detail-facts" id="detail-facts"></div><h3>Cómo se juega</h3><p id="detail-mechanic"></p><h3>Controles</h3><p id="detail-controls"></p><p class="privacy-note">El avance se guarda solo en este navegador y dispositivo. Si borras sus datos, usas otro navegador o juegas en modo privado, podrías perderlo. No hay sincronización ni cuentas.</p><p><a id="detail-repository" class="text-link" href="https://github.com/mitchell-castillo/orbita-de-rescate">Ver repositorio del juego ↗</a></p><a class="button button-lime" id="detail-play" href="https://mitchell-castillo.github.io/orbita-de-rescate/">Empezar la misión ↗</a></div></dialog>
+</body>
+</html>

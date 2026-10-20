@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-20",
+  "categories": [
+    {
+      "id": "puzles",
+      "name": "Puzles"
+    },
+    {
+      "id": "estrategia",
+      "name": "Estrategia"
+    },
+    {
+      "id": "arcade",
+      "name": "Arcade"
+    },
+    {
+      "id": "aventura",
+      "name": "Aventura"
+    }
+  ],
+  "games": [
+    {
+      "id": "orbita-de-rescate",
+      "number": 1,
+      "title": "Órbita de Rescate",
+      "subtitle": "Un pequeño impulso. Una gran misión.",
+      "description": "Una tripulación perdida entre asteroides. Una nave que no sabe frenar. Traza tu ruta, rescata a todos los astronautas y regresa al portal en seis sectores de dificultad creciente.",
+      "category": "puzles",
+      "tags": [
+        "Lógica",
+        "Espacio",
+        "Sin prisas"
+      ],
+      "date": "2026-10-20",
+      "duration": "10–15 min",
+      "difficulty": "Progresiva",
+      "levels": 6,
+      "status": "published",
+      "href": "https://mitchell-castillo.github.io/orbita-de-rescate/",
+      "cover": "assets/orbita-cover.svg",
+      "storageKey": "daily-games:orbita-de-rescate:v1",
+      "controls": "Flechas o WASD en teclado. Botones de dirección o deslizar en pantalla táctil. Z para deshacer y R para reiniciar el sector.",
+      "mechanic": "Deslizamiento inercial en una cuadrícula: cada impulso continúa hasta un obstáculo. Recoge a la tripulación en el trayecto y llega al portal para terminar.",
+      "uniqueness": "Puzle espacial de rutas inerciales y rescates múltiples; niveles originales diseñados para esta colección.",
+      "repository": "https://github.com/mitchell-castillo/orbita-de-rescate"
+    }
+  ]
+}

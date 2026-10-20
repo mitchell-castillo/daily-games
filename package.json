@@ -1,0 +1,12 @@
+{
+  "name": "daily-games",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Un juego original cada d\u00eda. Cat\u00e1logo est\u00e1tico y progreso local, listo para GitHub Pages.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check app.js && node --check assets/progress.js && npm test",
+    "start": "python3 -m http.server 8080"
+  }
+}
