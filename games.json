@@ -44,6 +44,32 @@
       "mechanic": "Deslizamiento inercial en una cuadrícula: cada impulso continúa hasta un obstáculo. Recoge a la tripulación en el trayecto y llega al portal para terminar.",
       "uniqueness": "Puzle espacial de rutas inerciales y rescates múltiples; niveles originales diseñados para esta colección.",
       "repository": "https://github.com/mitchell-castillo/orbita-de-rescate"
+    },
+    {
+      "id": "faro-de-medianoche",
+      "number": 2,
+      "title": "Faro de Medianoche",
+      "subtitle": "El mar es enorme. Tu luz puede cambiarlo todo.",
+      "description": "Cinco noches frente al mar. Orienta el faro, mantén cada velero iluminado y guíalo a puerto antes de que alcance las rocas. Un pequeño arcade de reflejos, prioridades y segundas oportunidades.",
+      "category": "arcade",
+      "tags": [
+        "Reflejos",
+        "Mar",
+        "Rescates"
+      ],
+      "date": "2026-10-20",
+      "duration": "3–5 min",
+      "difficulty": "Progresiva",
+      "levels": 5,
+      "levelLabel": "noches",
+      "status": "published",
+      "href": "https://mitchell-castillo.github.io/faro-de-medianoche/",
+      "cover": "assets/faro-cover.svg",
+      "storageKey": "daily-games:faro-de-medianoche:v1",
+      "controls": "Apunta con el ratón, toca o arrastra sobre el mar. Flechas izquierda/derecha o A/D para girar. Espacio, P o Escape para pausar. Incluye botones táctiles.",
+      "mechanic": "Orientación continua de un haz de luz: mantén los barcos iluminados hasta llenar su aro y rescatarlos. Prioriza los que se acercan a las rocas; las corrientes y el ritmo aumentan en cada noche.",
+      "uniqueness": "Arcade original de faro, tiempo de iluminación y priorización espacial. No repite las rutas por cuadrícula ni el deslizamiento inercial de Órbita de Rescate.",
+      "repository": "https://github.com/mitchell-castillo/faro-de-medianoche"
     }
   ]
 }

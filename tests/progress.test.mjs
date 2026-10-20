@@ -10,3 +10,9 @@ test('unknown schema resets cleanly',()=>{assert.deepEqual(normalizeProgress({ve
 test('invalid completion records and locked selected levels are rejected',()=>{const p=normalizeProgress({version:1,currentLevel:99,completed:{0:{bestMoves:3},1:{bestMoves:-1},8:{bestMoves:4}}});assert.equal(p.currentLevel,1);assert.equal(completionCount(p),1);});
 test('first gap controls unlock order',()=>{assert.equal(firstUnfinished({0:{bestMoves:3},2:{bestMoves:7}}),1);});
 test('all completed selects last sector',()=>{const completed=Object.fromEntries(Array.from({length:6},(_,i)=>[i,{bestMoves:3}]));assert.equal(firstUnfinished(completed),5);});
+
+test('arcade summaries coexist with original puzzle storage',()=>{
+  const score=normalizeProgress({version:1,completed:{0:{bestScore:550,stars:3}},currentLevel:1},5);
+  assert.equal(completionCount(score),1);assert.equal(score.completed[0].bestScore,550);
+  assert.equal(normalizeProgress({version:1,completed:{0:{bestScore:-5,stars:3}}},5).completed[0],undefined);
+});

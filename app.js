@@ -15,7 +15,7 @@ function details(game) {
   $('#detail-description').textContent = game.description;
   $('#detail-mechanic').textContent = game.mechanic;
   $('#detail-controls').textContent = game.controls;
-  $('#detail-facts').replaceChildren(...[`${game.levels} sectores`, game.duration, `Dificultad ${game.difficulty.toLowerCase()}`].map((text) => el('span', '', text)));
+  $('#detail-facts').replaceChildren(...[`${game.levels} ${game.levelLabel || 'sectores'}`, game.duration, `Dificultad ${game.difficulty.toLowerCase()}`].map((text) => el('span', '', text)));
   $('#detail-play').href = game.href;
   $('#detail-repository').href = game.repository;
   $('#detail-play').textContent = `${playLabel(game)} ↗`;
@@ -30,7 +30,7 @@ function renderFeatured() {
   $('#featured-title').textContent = game.title;
   $('#featured-description').textContent = game.description;
   $('#featured-duration').textContent = game.duration;
-  $('#featured-levels').textContent = `${game.levels} sectores`;
+  $('#featured-levels').textContent = `${game.levels} ${game.levelLabel || 'sectores'}`;
   $('#featured-play').href = game.href;
   $('#featured-art-link').href = game.href;
   $('#featured-art-link').setAttribute('aria-label', `Jugar ${game.title}`);
@@ -64,7 +64,7 @@ function card(game) {
   const more = el('button', 'details-link', 'Ver detalles'); more.onclick = () => details(game);
   bottom.append(play, more); content.append(top, title, el('p', '', game.subtitle), bottom);
   const completed = completionCount(gameProgress(game));
-  if (completed) content.append(el('div', 'card-progress', `${completed}/${game.levels} sectores completados en este navegador`));
+  if (completed) content.append(el('div', 'card-progress', `${completed}/${game.levels} ${game.levelLabel || 'sectores'} ${game.levelLabel === 'noches' ? 'completadas' : 'completados'} en este navegador`));
   article.append(cover, content); return article;
 }
 function renderGames() {

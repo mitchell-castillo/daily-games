@@ -9,9 +9,12 @@ export function normalizeProgress(value, levelCount = 6) {
   if (value.completed && typeof value.completed === 'object') {
     for (const [key, result] of Object.entries(value.completed)) {
       const index = Number(key);
-      if (Number.isInteger(index) && index >= 0 && index < levelCount && result &&
-          Number.isInteger(result.bestMoves) && result.bestMoves > 0 && result.bestMoves < 100000) {
+      if (!Number.isInteger(index) || index < 0 || index >= levelCount || !result) continue;
+      if (Number.isInteger(result.bestMoves) && result.bestMoves > 0 && result.bestMoves < 100000) {
         clean.completed[index] = { bestMoves: result.bestMoves };
+      } else if (Number.isInteger(result.bestScore) && result.bestScore >= 0 && result.bestScore <= 50000 &&
+                 Number.isInteger(result.stars) && result.stars >= 1 && result.stars <= 3) {
+        clean.completed[index] = { bestScore: result.bestScore, stars: result.stars };
       }
     }
   }
