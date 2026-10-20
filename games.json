@@ -70,6 +70,32 @@
       "mechanic": "Orientación continua de un haz de luz: mantén los barcos iluminados hasta llenar su aro y rescatarlos. Prioriza los que se acercan a las rocas; las corrientes y el ritmo aumentan en cada noche.",
       "uniqueness": "Arcade original de faro, tiempo de iluminación y priorización espacial. No repite las rutas por cuadrícula ni el deslizamiento inercial de Órbita de Rescate.",
       "repository": "https://github.com/mitchell-castillo/faro-de-medianoche"
+    },
+    {
+      "id": "jardin-de-bolsillo",
+      "number": 3,
+      "title": "Jardín de Bolsillo",
+      "subtitle": "Pequeñas decisiones. Grandes cosechas.",
+      "description": "Cuatro pequeños huertos, tres cultivos y un pronóstico de lluvia. Decide cuándo sembrar, regar y cosechar antes de que termine la temporada. Estrategia por turnos para jugar sin prisas.",
+      "category": "estrategia",
+      "tags": [
+        "Por turnos",
+        "Naturaleza",
+        "Sin prisas"
+      ],
+      "date": "2026-10-20",
+      "duration": "8–12 min",
+      "difficulty": "Progresiva",
+      "levels": 4,
+      "levelLabel": "huertos",
+      "status": "published",
+      "href": "https://mitchell-castillo.github.io/jardin-de-bolsillo/",
+      "repository": "https://github.com/mitchell-castillo/jardin-de-bolsillo",
+      "cover": "assets/jardin-cover.svg",
+      "storageKey": "daily-games:jardin-de-bolsillo:v1",
+      "controls": "Selecciona una semilla, la regadera o la cesta y luego una parcela. Ratón, pantalla táctil o Tab y Enter. Botón para deshacer y confirmación para reiniciar.",
+      "mechanic": "Gestión por turnos de tres acciones diarias, agua y semillas; crecimiento por riego y lluvia, cosechas y bonificación por variedad. Pronóstico determinista para planificar recursos.",
+      "uniqueness": "Estrategia original de huerto y recursos sin reloj. No usa deslizamiento inercial ni apuntado continuo de luz: el desafío es decidir el momento de sembrar, regar y cosechar."
     }
   ]
 }

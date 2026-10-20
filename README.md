@@ -8,6 +8,9 @@ Catálogo público en español de juegos originales. Cada juego vive en su propi
 - Código del segundo juego: https://github.com/mitchell-castillo/faro-de-medianoche
 - Código del primer juego: https://github.com/mitchell-castillo/orbita-de-rescate
 
+- Tercer juego: https://mitchell-castillo.github.io/jardin-de-bolsillo/
+- Código del tercer juego: https://github.com/mitchell-castillo/jardin-de-bolsillo
+
 ## Ejecutar localmente
 
 No hay dependencias ni compilación. Con Python 3 y Node.js 24:
