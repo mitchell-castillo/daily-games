@@ -1,8 +1,8 @@
 import { readProgress, completionCount } from './assets/progress.js';
+import { filterGames, availableCategories } from './assets/catalogue.js';
 const $ = (selector) => document.querySelector(selector);
 let catalogue, category = 'all';
 let searchTerm = '';
-const normalize = (text) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 const el = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node; };
 const categoryName = (id) => catalogue.categories.find((item) => item.id === id)?.name || id;
 function gameProgress(game) { return readProgress(game.storageKey, undefined, game.levels).progress; }
@@ -35,18 +35,24 @@ function renderFeatured() {
   $('#featured-art-link').href = game.href;
   $('#featured-art-link').setAttribute('aria-label', `Jugar ${game.title}`);
   $('#featured-art-link img').src = game.cover;
+  $('#featured-art-link img').alt = '';
+  $('.art-number').textContent = String(game.number).padStart(2, '0');
   $('#featured-play').replaceChildren(document.createTextNode(`${playLabel(game)} `), el('span', '', '↗'));
   $('#featured-details').onclick = () => details(game);
 }
 function renderFilters() {
-  const filters = [{ id: 'all', name: 'Todos' }, ...catalogue.categories];
+  const filters = [{ id: 'all', name: 'Todos' }, ...availableCategories(catalogue.games, catalogue.categories)];
   $('#category-filters').replaceChildren(...filters.map((item) => {
     const count = catalogue.games.filter((g) => item.id === 'all' || g.category === item.id).length;
     const button = el('button', 'filter', item.name);
     button.type = 'button';
     button.setAttribute('aria-pressed', String(item.id === category));
     button.append(el('span', '', count));
-    button.onclick = () => { category = item.id; renderFilters(); renderGames(); };
+    button.onclick = () => {
+      category = item.id;
+      for (const filter of $('#category-filters').querySelectorAll('button')) filter.setAttribute('aria-pressed', String(filter === button));
+      renderGames();
+    };
     return button;
   }));
 }
@@ -68,14 +74,15 @@ function card(game) {
   article.append(cover, content); return article;
 }
 function renderGames() {
-  const games = catalogue.games.filter((game) => (category === 'all' || game.category === category) && normalize(`${game.title} ${game.description} ${game.tags.join(' ')}`).includes(normalize(searchTerm)));
+  const games = filterGames(catalogue.games, catalogue.categories, category, searchTerm);
   const grid = $('#game-grid'); grid.replaceChildren(...games.map(card));
-  $('#catalogue-status').textContent = '';
+  $('#catalogue-status').textContent = `${games.length} de ${catalogue.games.length} juegos${category === 'all' ? '' : ` · ${categoryName(category)}`}${searchTerm ? ` · Búsqueda: “${searchTerm}”` : ''}`;
+  $('#clear-filters').hidden = category === 'all' && !searchTerm;
   if (!games.length) {
     const empty = el('div', 'no-results');
     empty.append(el('p', '', searchTerm ? 'No encontramos juegos con esa búsqueda.' : 'Esta categoría todavía no tiene juegos. Lo bueno está por venir.'));
     const reset = el('button', 'button button-quiet', 'Ver toda la colección');
-    reset.onclick = () => { category = 'all'; searchTerm = ''; $('#search').value = ''; renderFilters(); renderGames(); };
+    reset.onclick = resetFilters;
     empty.append(reset); grid.append(empty);
   } else if (games.length === 1 && category === 'all' && !searchTerm) {
     const next = el('div', 'empty-card'); const copy = el('div');
@@ -83,6 +90,11 @@ function renderGames() {
     next.append(el('span', 'empty-icon', '✳'), copy); grid.append(next);
   }
 }
+function resetFilters() {
+  category = 'all'; searchTerm = ''; $('#search').value = '';
+  renderFilters(); renderGames(); $('#search').focus();
+}
+$('#clear-filters').onclick = resetFilters;
 $('#search').addEventListener('input', (event) => { searchTerm = event.target.value.trim(); if (catalogue) renderGames(); });
 $('#close-details').onclick = () => $('#details-dialog').close();
 $('#details-dialog').addEventListener('click', (event) => { if (event.target === event.currentTarget) { const r = event.currentTarget.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) event.currentTarget.close(); } });
@@ -96,6 +108,7 @@ async function load() {
     if (!Array.isArray(data.games) || !Array.isArray(data.categories)) throw new Error('Formato del catálogo no válido');
     catalogue = { ...data, games: data.games.filter((game) => game.status === 'published').sort((a,b) => b.number - a.number) };
     $('#game-count').textContent = catalogue.games.length;
+    $('#top-availability').textContent = `La colección tiene ${catalogue.games.length} ${catalogue.games.length === 1 ? 'juego disponible' : 'juegos disponibles'}. El ranking mostrará hasta 5 cuando haya estadísticas globales de partidas.`;
     renderFeatured(); renderFilters(); renderGames();
   } catch {
     $('#game-grid').replaceChildren(el('p', 'no-results', 'No se pudo cargar la colección. Comprueba tu conexión y vuelve a intentarlo.'));
@@ -103,3 +116,4 @@ async function load() {
   }
 }
 load();
+
