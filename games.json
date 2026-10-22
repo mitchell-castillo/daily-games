@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20",
+  "updatedAt": "2026-10-22",
   "categories": [
     {
       "id": "puzles",
@@ -96,6 +96,32 @@
       "controls": "Selecciona una semilla, la regadera o la cesta y luego una parcela. Ratón, pantalla táctil o Tab y Enter. Botón para deshacer y confirmación para reiniciar.",
       "mechanic": "Gestión por turnos de tres acciones diarias, agua y semillas; crecimiento por riego y lluvia, cosechas y bonificación por variedad. Pronóstico determinista para planificar recursos.",
       "uniqueness": "Estrategia original de huerto y recursos sin reloj. No usa deslizamiento inercial ni apuntado continuo de luz: el desafío es decidir el momento de sembrar, regar y cosechar."
+    },
+    {
+      "id": "archivo-de-ecos",
+      "number": 5,
+      "title": "Archivo de Ecos",
+      "subtitle": "Míralo. Recuérdalo. Devuelve su eco.",
+      "description": "Nueve balizas guardan seis mensajes entre las estrellas. Observa cada señal y reconstruye su orden. Cuando el eco regrese, deberás responder del último destello al primero. Memoria visual sin reloj ni prisas.",
+      "category": "puzles",
+      "tags": [
+        "Memoria",
+        "Secuencias",
+        "Sin prisas"
+      ],
+      "date": "2026-10-22",
+      "duration": "5–8 min",
+      "difficulty": "Progresiva",
+      "levels": 6,
+      "levelLabel": "señales",
+      "status": "published",
+      "href": "https://mitchell-castillo.github.io/archivo-de-ecos/",
+      "repository": "https://github.com/mitchell-castillo/archivo-de-ecos",
+      "cover": "assets/ecos-cover.svg",
+      "storageKey": "daily-games:archivo-de-ecos:v1",
+      "controls": "Pulsa Ver señal y repite con los botones o teclas 1–9. Repetición libre, selección de capítulo y borrado con confirmación. Escape pausa la reproducción.",
+      "mechanic": "Memoria visual secuencial sobre nueve balizas: tres señales en orden original y tres en orden inverso. Sin límite para responder; los errores permiten reintentar.",
+      "uniqueness": "Desafío original de recuerdo y reversión de secuencias. No repite rutas inerciales, reflejos de faro, gestión del huerto ni cambios de vías."
     }
   ]
 }

@@ -22,15 +22,16 @@ function setup(response=data){
   vm.runInContext(source,context);
   return {get,context};
 }
+const count=data.games.filter(g=>g.status==='published').length;
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
 test('UI separates real collection from unavailable ranking and supports repeated filtering/reset',async()=>{
- const {get}=setup();await flush();assert.equal(get('#game-grid').children.length,3);assert.match(get('#top-availability').textContent,/3 juegos/);
+ const {get}=setup();await flush();assert.equal(get('#game-grid').children.length,count);assert.ok(get('#top-availability').textContent.includes(`${count} juegos`));
  const buttons=get('#category-filters').children;const arcade=buttons.find(b=>b.textContent==='Arcade');arcade.onclick();assert.equal(get('#game-grid').children.length,1);assert.equal(arcade.attributes['aria-pressed'],'true');arcade.onclick();assert.equal(get('#category-filters').children,buttons);
- get('#search').listeners.input({target:{value:'jardín'}});assert.equal(get('#game-grid').children[0].className,'no-results');assert.match(get('#catalogue-status').textContent,/0 de 3/);
- get('#clear-filters').onclick();assert.equal(get('#game-grid').children.length,3);assert.equal(get('#search').focused,true);assert.equal(get('#clear-filters').hidden,true);
- get('#search').listeners.input({target:{value:'ORBITA'}});assert.equal(get('#game-grid').children.length,1);assert.match(get('#catalogue-status').textContent,/1 de 3/);
+ get('#search').listeners.input({target:{value:'jardín'}});assert.equal(get('#game-grid').children[0].className,'no-results');assert.ok(get('#catalogue-status').textContent.includes(`0 de ${count}`));
+ get('#clear-filters').onclick();assert.equal(get('#game-grid').children.length,count);assert.equal(get('#search').focused,true);assert.equal(get('#clear-filters').hidden,true);
+ get('#search').listeners.input({target:{value:'ORBITA'}});assert.equal(get('#game-grid').children.length,1);assert.ok(get('#catalogue-status').textContent.includes(`1 de ${count}`));
 });
 test('UI only includes published games and populated categories',async()=>{
  const draft={...data.games[0],id:'draft',number:99,status:'draft',category:'aventura'};
- const {get}=setup({...data,games:[...data.games,draft]});await flush();assert.equal(get('#game-grid').children.length,3);assert.equal(get('#category-filters').children.length,4);assert.equal(get('#featured-title').textContent,'Jardín de Bolsillo');
+ const {get}=setup({...data,games:[...data.games,draft]});await flush();assert.equal(get('#game-grid').children.length,count);assert.equal(get('#category-filters').children.length,4);assert.equal(get('#featured-title').textContent,[...data.games].filter(g=>g.status==='published').sort((a,b)=>b.number-a.number)[0].title);
 });
