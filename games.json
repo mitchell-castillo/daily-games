@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-22",
+  "updatedAt": "2026-10-23",
   "categories": [
     {
       "id": "puzles",
@@ -96,6 +96,32 @@
       "controls": "Selecciona una semilla, la regadera o la cesta y luego una parcela. Ratón, pantalla táctil o Tab y Enter. Botón para deshacer y confirmación para reiniciar.",
       "mechanic": "Gestión por turnos de tres acciones diarias, agua y semillas; crecimiento por riego y lluvia, cosechas y bonificación por variedad. Pronóstico determinista para planificar recursos.",
       "uniqueness": "Estrategia original de huerto y recursos sin reloj. No usa deslizamiento inercial ni apuntado continuo de luz: el desafío es decidir el momento de sembrar, regar y cosechar."
+    },
+    {
+      "id": "cambio-de-via",
+      "number": 4,
+      "title": "Cambio de Vía",
+      "subtitle": "Un pequeño cambio. Todos en su destino.",
+      "description": "Seis estaciones y varios trenes que salen a la vez. Orienta las agujas, sigue cada letra hasta su andén y comprueba tu plan paso a paso. Puzles ferroviarios originales para resolver sin prisas.",
+      "category": "puzles",
+      "tags": [
+        "Lógica",
+        "Trenes",
+        "Sin prisas"
+      ],
+      "date": "2026-10-21",
+      "duration": "8–12 min",
+      "difficulty": "Progresiva",
+      "levels": 6,
+      "levelLabel": "estaciones",
+      "status": "published",
+      "href": "https://mitchell-castillo.github.io/cambio-de-via/",
+      "repository": "https://github.com/mitchell-castillo/cambio-de-via",
+      "cover": "assets/via-cover.svg",
+      "storageKey": "daily-games:cambio-de-via:v1",
+      "controls": "Pulsa una aguja para cambiar su ruta. Flechas recorren las agujas; Enter o Espacio las cambian. Z deshace, R reinicia con confirmación, P pausa y Escape vuelve al plano.",
+      "mechanic": "Planificación de vías con bifurcaciones y salidas simultáneas: cada tren debe alcanzar su andén. Los puentes permiten cruces sin conexión; prueba el recorrido completo o paso a paso.",
+      "uniqueness": "Puzle original de conexión ferroviaria y coordinación de trenes. No repite rutas inerciales, apuntado del faro, gestión de cultivos ni memoria de secuencias."
     },
     {
       "id": "archivo-de-ecos",
