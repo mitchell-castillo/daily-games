@@ -148,6 +148,32 @@
       "controls": "Pulsa Ver señal y repite con los botones o teclas 1–9. Repetición libre, selección de capítulo y borrado con confirmación. Escape pausa la reproducción.",
       "mechanic": "Memoria visual secuencial sobre nueve balizas: tres señales en orden original y tres en orden inverso. Sin límite para responder; los errores permiten reintentar.",
       "uniqueness": "Desafío original de recuerdo y reversión de secuencias. No repite rutas inerciales, reflejos de faro, gestión del huerto ni cambios de vías."
+    },
+    {
+      "id": "contrapeso",
+      "number": 6,
+      "title": "Contrapeso",
+      "subtitle": "Todo tiene su peso. La distancia lo cambia todo.",
+      "description": "Seis móviles suspendidos y un puñado de pesos. Encuentra una distribución que equilibre las dos ramas y la barra superior al mismo tiempo. Un puzle de lógica matemática para jugar sin reloj.",
+      "category": "puzles",
+      "tags": [
+        "Equilibrio",
+        "Lógica matemática",
+        "Sin prisas"
+      ],
+      "date": "2026-10-23",
+      "duration": "8–12 min",
+      "difficulty": "Progresiva",
+      "levels": 6,
+      "levelLabel": "móviles",
+      "status": "published",
+      "href": "https://mitchell-castillo.github.io/contrapeso/",
+      "repository": "https://github.com/mitchell-castillo/contrapeso",
+      "cover": "assets/contrapeso-cover.svg",
+      "storageKey": "daily-games:contrapeso:v1",
+      "controls": "Toca un peso y luego un gancho. Tab y Enter o Espacio para activar; flechas para recorrer ganchos, Supr para retirar, Escape para cancelar y Z para deshacer. Reinicio y borrado con confirmación.",
+      "mechanic": "Asignación e intercambio de pesos en un móvil de tres barras. La fuerza de cada gancho es peso por distancia; la barra superior sostiene el total de cada rama. Las tres deben equilibrarse a la vez.",
+      "uniqueness": "Puzle original de restricciones simultáneas de masas y momentos. No usa rutas, cambios ferroviarios, reflejos, gestión de cultivos ni recuerdo de secuencias."
     }
   ]
 }
