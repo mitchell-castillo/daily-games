@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-24",
   "categories": [
     {
       "id": "puzles",
@@ -174,6 +174,32 @@
       "controls": "Toca un peso y luego un gancho. Tab y Enter o Espacio para activar; flechas para recorrer ganchos, Supr para retirar, Escape para cancelar y Z para deshacer. Reinicio y borrado con confirmación.",
       "mechanic": "Asignación e intercambio de pesos en un móvil de tres barras. La fuerza de cada gancho es peso por distancia; la barra superior sostiene el total de cada rama. Las tres deben equilibrarse a la vez.",
       "uniqueness": "Puzle original de restricciones simultáneas de masas y momentos. No usa rutas, cambios ferroviarios, reflejos, gestión de cultivos ni recuerdo de secuencias."
+    },
+    {
+      "id": "mosaico-nomada",
+      "number": 7,
+      "title": "Mosaico Nómada",
+      "subtitle": "Un viaje, pieza a pieza.",
+      "description": "Seis paisajes esperan su último retazo. Selecciona piezas, gíralas y encuentra cómo cubrir cada silueta sin dejar huecos ni superponerlas. Un puzle de encaje espacial, sin reloj y a tu ritmo.",
+      "category": "puzles",
+      "tags": [
+        "Encaje espacial",
+        "Poliminós",
+        "Sin prisas"
+      ],
+      "date": "2026-10-24",
+      "duration": "10–20 min",
+      "difficulty": "Progresiva",
+      "levels": 6,
+      "levelLabel": "mosaicos",
+      "status": "published",
+      "href": "https://mitchell-castillo.github.io/mosaico-nomada/",
+      "repository": "https://github.com/mitchell-castillo/mosaico-nomada",
+      "cover": "assets/mosaico-cover.svg",
+      "storageKey": "daily-games:mosaico-nomada:v1",
+      "controls": "Selecciona una pieza, gírala y pulsa la casilla de su ancla; ratón o táctil sin arrastrar. Tab y Enter o Espacio para activar, flechas en el tablero, R/Q para girar, Z para deshacer, Supr para retirar y Escape para cancelar. Reinicio con confirmación.",
+      "mechanic": "Cobertura exacta de seis siluetas con poliminós de cuatro y cinco casillas: selección, rotación de 90° y colocación sin superposiciones, sin reflejar piezas. Incluye retirada, traslado y deshacer.",
+      "uniqueness": "Seis composiciones originales de encaje espacial con huecos y bordes distintos. No usa rutas inerciales, iluminación de barcos, gestión de huertos, conexiones ferroviarias, memoria secuencial ni equilibrio de pesos."
     }
   ]
 }
