@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-24",
+  "updatedAt": "2026-10-25",
   "categories": [
     {
       "id": "puzles",
@@ -200,6 +200,32 @@
       "controls": "Selecciona una pieza, gírala y pulsa la casilla de su ancla; ratón o táctil sin arrastrar. Tab y Enter o Espacio para activar, flechas en el tablero, R/Q para girar, Z para deshacer, Supr para retirar y Escape para cancelar. Reinicio con confirmación.",
       "mechanic": "Cobertura exacta de seis siluetas con poliminós de cuatro y cinco casillas: selección, rotación de 90° y colocación sin superposiciones, sin reflejar piezas. Incluye retirada, traslado y deshacer.",
       "uniqueness": "Seis composiciones originales de encaje espacial con huecos y bordes distintos. No usa rutas inerciales, iluminación de barcos, gestión de huertos, conexiones ferroviarias, memoria secuencial ni equilibrio de pesos."
+    },
+    {
+      "id": "clave-de-cristal",
+      "number": 8,
+      "title": "Clave de Cristal",
+      "subtitle": "La luz guarda una clave.",
+      "description": "Seis cerraduras de cristal esperan su combinación. Cruza pistas de posición y pertenencia, coloca símbolos distintos y descubre una única clave para cada puerta. Deducción sin reloj, con todas las pistas a la vista.",
+      "category": "puzles",
+      "tags": [
+        "Deducción",
+        "Símbolos",
+        "Sin prisas"
+      ],
+      "date": "2026-10-25",
+      "duration": "10–20 min",
+      "difficulty": "Progresiva",
+      "levels": 6,
+      "levelLabel": "cerraduras",
+      "status": "published",
+      "href": "https://mitchell-castillo.github.io/clave-de-cristal/",
+      "repository": "https://github.com/mitchell-castillo/clave-de-cristal",
+      "cover": "assets/cristal-cover.svg",
+      "storageKey": "daily-games:clave-de-cristal:v1",
+      "controls": "Selecciona una casilla y un símbolo con ratón o táctil, sin arrastrar. Tab y Enter o Espacio activan controles; 1–7 coloca símbolos, flechas recorren casillas, Supr/Retroceso borra y Enter comprueba desde una casilla. Escape cancela confirmaciones. Reinicio y borrado con confirmación.",
+      "mechanic": "Deducción por restricciones de posición y pertenencia: cada combinación recibe totales de símbolos exactos y desplazados. Las claves no repiten símbolos. Seis archivos de pistas originales determinan soluciones únicas y las pruebas añaden evidencia.",
+      "uniqueness": "Puzle original de cruce de pistas con símbolos siempre visibles. No usa rutas inerciales, apuntado de faro, recursos de huerto, trenes simultáneos, memoria secuencial, masas/momentos ni encaje de poliminós."
     }
   ]
 }
