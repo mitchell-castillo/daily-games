@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "categories": [
     {
       "id": "puzles",
@@ -252,6 +252,32 @@
       "controls": "Pulsa un farol; Tab/Enter/Espacio y flechas. Deshacer y reinicio/borrado con confirmación. Verificado en escritorio; móvil aún no verificado.",
       "mechanic": "Alternancia de una casilla y sus vecinas ortogonales para apagar una cuadrícula.",
       "uniqueness": "Seis composiciones originales sobre la mecánica clásica Lights Out, diferente de las ocho entregas anteriores."
+    },
+    {
+      "id": "islas-de-tinta",
+      "number": 10,
+      "title": "Islas de Tinta",
+      "subtitle": "Cada pista revela una costa.",
+      "description": "Descubre seis islas de tinta con pistas numéricas de filas y columnas. Marca los huecos y cruza la información: cada composición tiene una única solución.",
+      "category": "puzles",
+      "tags": [
+        "Nonogramas",
+        "Deducción",
+        "Sin prisas"
+      ],
+      "date": "2026-10-27",
+      "duration": "10–20 min",
+      "difficulty": "Progresiva",
+      "levels": 6,
+      "levelLabel": "islas",
+      "status": "published",
+      "href": "https://mitchell-castillo.github.io/islas-de-tinta/",
+      "repository": "https://github.com/mitchell-castillo/islas-de-tinta",
+      "cover": "assets/tinta-cover.svg",
+      "storageKey": "daily-games:islas-de-tinta:v1",
+      "controls": "Rellena o marca huecos con ratón y controles de teclado. Deshacer y confirmaciones de reinicio/borrado. Verificado en escritorio; móvil aún no verificado.",
+      "mechanic": "Nonogramas 5×5: las pistas indican longitudes de grupos consecutivos separados por al menos una casilla vacía. Seis composiciones originales de solución única.",
+      "uniqueness": "Nueva mecánica frente a las nueve entregas anteriores: deducción espacial por longitudes de grupos, sin alternancia de vecinos, claves de símbolos, memoria ni rutas."
     }
   ]
 }

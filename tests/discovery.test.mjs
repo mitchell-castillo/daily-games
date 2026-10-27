@@ -19,11 +19,12 @@ test('search ignores accents/case/outer whitespace and includes gameplay categor
   assert.equal(filterGames(games,categories,'all','por turnos')[0].id,'jardin-de-bolsillo');
 });
 test('category and search combine; unmatched input returns no games',()=>{
-  assert.equal(filterGames(games,categories,'arcade','mar').length,1);
-  assert.equal(filterGames(games,categories,'puzles','mar').length,0);
+  assert.equal(filterGames(games,categories,'arcade','medianoche').length,1);
+  assert.equal(filterGames(games,categories,'puzles','medianoche').length,0);
   assert.equal(filterGames(games,categories,'all','no-existe').length,0);
 });
 test('empty catalogue remains safe',()=>{
   assert.deepEqual(filterGames([],categories),[]);
   assert.deepEqual(availableCategories([],categories),[]);
 });
+
