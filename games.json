@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "categories": [
     {
       "id": "puzles",
@@ -226,6 +226,32 @@
       "controls": "Selecciona una casilla y un símbolo con ratón o táctil, sin arrastrar. Tab y Enter o Espacio activan controles; 1–7 coloca símbolos, flechas recorren casillas, Supr/Retroceso borra y Enter comprueba desde una casilla. Escape cancela confirmaciones. Reinicio y borrado con confirmación.",
       "mechanic": "Deducción por restricciones de posición y pertenencia: cada combinación recibe totales de símbolos exactos y desplazados. Las claves no repiten símbolos. Seis archivos de pistas originales determinan soluciones únicas y las pruebas añaden evidencia.",
       "uniqueness": "Puzle original de cruce de pistas con símbolos siempre visibles. No usa rutas inerciales, apuntado de faro, recursos de huerto, trenes simultáneos, memoria secuencial, masas/momentos ni encaje de poliminós."
+    },
+    {
+      "id": "pulso-de-faroles",
+      "number": 9,
+      "title": "Pulso de Faroles",
+      "subtitle": "Un toque. Muchas luces.",
+      "description": "Apaga los faroles de seis plazas. Cada toque cambia también sus vecinos: lógica de alternancia sin reloj.",
+      "category": "puzles",
+      "tags": [
+        "Alternancia",
+        "Luces",
+        "Sin prisas"
+      ],
+      "date": "2026-10-26",
+      "duration": "5–10 min",
+      "difficulty": "Progresiva",
+      "levels": 6,
+      "levelLabel": "plazas",
+      "status": "published",
+      "href": "https://mitchell-castillo.github.io/pulso-de-faroles/",
+      "repository": "https://github.com/mitchell-castillo/pulso-de-faroles",
+      "cover": "assets/pulso-cover.svg",
+      "storageKey": "daily-games:pulso-de-faroles:v1",
+      "controls": "Pulsa un farol; Tab/Enter/Espacio y flechas. Deshacer y reinicio/borrado con confirmación. Verificado en escritorio; móvil aún no verificado.",
+      "mechanic": "Alternancia de una casilla y sus vecinas ortogonales para apagar una cuadrícula.",
+      "uniqueness": "Seis composiciones originales sobre la mecánica clásica Lights Out, diferente de las ocho entregas anteriores."
     }
   ]
 }
